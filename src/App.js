@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Contents from './components/Contents'
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -16,14 +16,13 @@ class App extends React.Component {
   componentDidMount() {
 
 
-    const url = 'https://newsapi.org/v2/everything?q=politics&apiKey=a940f64b7c854d089fc90af200c5af29&language=fr'
 
     fetch('https://newsapi.org/v2/everything?q=politics&apiKey=a940f64b7c854d089fc90af200c5af29&language=fr').then(response => response.json())
       .then(data => this.setState(() => {
 
         return {
 
-          dataNews: data
+          dataNews: [...this.state.dataNews].concat(data)
         }
       }))
   }
@@ -31,12 +30,13 @@ class App extends React.Component {
 
   render() {
 
-    console.log(this.state.dataNews)
+    console.log('da', this.state.dataNews)
 
     return (
 
       <div>
-        <h1>Welcome to newsApp</h1>
+        <h1>Welcome to world news</h1>
+        <Contents content={this.state.dataNews} />
       </div>
     )
 
