@@ -30,7 +30,7 @@ class App extends React.Component {
     return (
 
       <div>
-        <h1>Welcome to world news</h1>
+        <h1 id='title'>Welcome to world news</h1>
         <Contents content={this.state.articles} />
       </div>
     )

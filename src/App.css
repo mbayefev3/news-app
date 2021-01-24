@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+#title{
+  
+  text-align:center
+}
+
+#container, .article{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+}
+
+#image{
+  width:200px;
+  height:200px
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

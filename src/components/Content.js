@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../App.css'
 const Content = ({ result }) => {
 
     const resultt = result.content
@@ -11,7 +11,7 @@ const Content = ({ result }) => {
             <p>{result.title}</p>
             <p>{result.author}</p>
             <a href={result.url}>{result.source.name}</a>
-            <img src={result.urlToImage} alt="" />
+            <img id="image" src={result.urlToImage} alt="" />
             <p>{result.publishedAt}</p>
 
         </div>
