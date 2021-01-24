@@ -1,13 +1,19 @@
 import React from "react";
 
 const Content = ({ result }) => {
+
+    const resultt = result.content
+
+
+
     return (
         <div className="article">
-            <p>{result.author}</p>
             <p>{result.title}</p>
-            <p>{result.publishedAt}</p>
-            <p>{result.content}</p>
+            <p>{result.author}</p>
+            <a href={result.url}>{result.source.name}</a>
             <img src={result.urlToImage} alt="" />
+            <p>{result.publishedAt}</p>
+
         </div>
     );
 };
