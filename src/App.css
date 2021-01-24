@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+body{
+  margin: 0;
+
+  text-align: center;
+}
+
+a{
+  text-align: center;
+}
 #title{
   
   text-align:center
@@ -11,10 +20,10 @@
 #container, .article{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-  grid-gap:30px
+  grid-gap:10px
 }
 
-#image{
+img{
   width:200px;
   height:200px
 }
