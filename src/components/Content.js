@@ -1,15 +1,15 @@
-import React from 'react'
+import React from "react";
 
-
-const Content = (props) => {
-
+const Content = ({ result }) => {
     return (
-        <div>
-            <p>{props.Content}</p>
+        <div className="article">
+            <p>{result.author}</p>
+            <p>{result.title}</p>
+            <p>{result.publishedAt}</p>
+            <p>{result.content}</p>
+            <img src={result.urlToImage} alt="" />
         </div>
-    )
+    );
+};
 
-}
-
-
-export default Content
+export default Content;
