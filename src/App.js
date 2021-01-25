@@ -1,6 +1,7 @@
 import React from 'react'
 import Contents from './components/Contents'
 import './App.css'
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -31,6 +32,8 @@ class App extends React.Component {
 
       <div>
         <h1 id='title'>Welcome to world news</h1>
+
+
         <Contents content={this.state.articles} />
       </div>
     )

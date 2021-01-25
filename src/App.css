@@ -2,30 +2,29 @@
   text-align: center;
 }
 
-body{
+body {
   margin: 0;
 
   text-align: center;
 }
 
-a{
+a {
   text-align: center;
 }
-#title{
-  
-  text-align:center
+#title {
+  text-align: center;
 }
 
-
-#container, .article{
+#container,
+.article {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-  grid-gap:10px
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
 }
 
-img{
-  width:200px;
-  height:200px
+img {
+  width: 200px;
+  height: 200px;
 }
 .App-logo {
   height: 40vmin;
