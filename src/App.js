@@ -1,5 +1,6 @@
 import React from 'react'
 import Contents from './components/Contents'
+import Form from './components/Form'
 import './App.css'
 
 class App extends React.Component {
@@ -8,7 +9,9 @@ class App extends React.Component {
     this.state = {
 
       dataNews: [],
-      articles: []
+      articles: [],
+      filtered: [],
+      search: ''
     }
 
   }
@@ -24,17 +27,68 @@ class App extends React.Component {
   }
 
 
+
+  handleSubmit = (e) => {
+    this.setState(() => {
+
+      return {
+
+        search: e.target.value
+      }
+    })
+
+
+    const filtered = this.state.articles.filter(data => {
+
+      if (data.author && data.author.toLowerCase().includes(this.state.search.toLocaleLowerCase())) {
+
+        return data.author
+      }
+
+      // return data.author
+    })
+
+
+
+    if (filtered) {
+
+      this.setState(() => {
+
+        return {
+
+          filtered: filtered
+        }
+      })
+    } else {
+
+      this.setState(() => {
+
+        return {
+          filtered: [...this.state.articles]
+        }
+      })
+    }
+
+
+
+  }
+
+
+
+
   render() {
 
     // console.log('da', this.state.dataNews)
+
 
     return (
 
       <div>
         <h1 id='title'>Welcome to world news</h1>
+        <Form handleSubmit={this.handleSubmit} />
 
+        <Contents content={this.state.filtered} articles={this.state.articles} />
 
-        <Contents content={this.state.articles} />
       </div>
     )
 
