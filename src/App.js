@@ -69,6 +69,17 @@ class App extends React.Component {
       })
     }
 
+    if (this.state.search.length === 0) {
+
+      this.setState(() => {
+
+        return {
+
+          filtered: [...this.state.articles]
+
+        }
+      })
+    }
 
 
   }
@@ -78,6 +89,7 @@ class App extends React.Component {
 
   render() {
 
+    console.log('Search', this.state.search)
     // console.log('da', this.state.dataNews)
 
 
@@ -87,7 +99,7 @@ class App extends React.Component {
         <h1 id='title'>Welcome to world news</h1>
         <Form handleSubmit={this.handleSubmit} />
 
-        <Contents content={this.state.filtered} articles={this.state.articles} />
+        <Contents content={this.state.filtered} articles={this.state.articles} search={this.state.search} />
 
       </div>
     )
