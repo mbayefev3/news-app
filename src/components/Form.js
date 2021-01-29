@@ -1,25 +1,21 @@
-import React from 'react'
+import React from "react";
+import { Input } from "semantic-ui-react";
 
-const Form = (props) => {
+const Form = props => {
+  return (
+    <div>
+      <Input
+        type="search"
+        id="search"
+        name="search"
+        onInput={props.handleSubmit}
+        size="large"
+        icon="search"
+        placeholder="Search..."
+        style={{ marginBottom: "20px" }}
+      />
+    </div>
+  );
+};
 
-
-    return (
-        <div>
-
-
-            <label htmlFor='search'>Search</label>
-            <input type='search' id='search' name='search' onInput={props.handleSubmit} />
-
-
-
-
-
-
-
-        </div>
-    )
-}
-
-
-
-export default Form
+export default Form;
