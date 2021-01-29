@@ -23,11 +23,11 @@ const InfoNav = () => {
 
     return (
         <div className='nav-bar'>
-            <NavLink class='nav' to='/' exact={true}>Politics</NavLink>
-            <NavLink class='nav' to='/newsone'>Sports</NavLink>
-            <NavLink class='nav' to='newstwo'>Entertainement</NavLink>
-            <NavLink class='nav' to='newsthree'>Health</NavLink>
-            <NavLink class='nav' to='/newsfour'>Money</NavLink>
+            <NavLink class='nav' to='/' activeStyle={{ color: 'white' }} exact={true}>Politics</NavLink>
+            <NavLink class='nav' to='/newsone' activeStyle={{ color: 'white' }}>Sports</NavLink>
+            <NavLink class='nav' to='newstwo' activeStyle={{ color: 'white' }}>Entertainement</NavLink>
+            <NavLink class='nav' to='newsthree' activeStyle={{ color: 'white' }}>Health</NavLink>
+            <NavLink class='nav' to='/newsfour' activeStyle={{ color: 'white' }}>Money</NavLink>
         </div>
     )
 }
@@ -35,9 +35,11 @@ const InfoNav = () => {
 const News = () => {
 
     return (
-        <div>
 
-            <BrowserRouter>
+
+        <BrowserRouter>
+            <div>
+
                 <InfoNav />
                 <Switch>
 
@@ -49,8 +51,9 @@ const News = () => {
 
                 </Switch>
 
-            </BrowserRouter>
-        </div>
+            </div>
+        </BrowserRouter>
+
     )
 }
 
